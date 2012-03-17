@@ -17,17 +17,26 @@ namespace NovaTemplateWizard
 		public static readonly Dictionary<string, string> GlobalDictionary;
 
 		/// <summary>
+		/// Creates a new GUID.
+		/// </summary>
+		/// <returns></returns>
+		private static string CreateGuid()
+		{
+			return Guid.NewGuid().ToString();
+		}
+
+		/// <summary>
 		/// Initializes the <see cref="SolutionWizard"/> class.
 		/// </summary>
 		static SolutionWizard()
 		{
 			GlobalDictionary = new Dictionary<string, string>
 			                   	{
-			                   		{"$interfacesguid$", Guid.NewGuid().ToString()},
-			                   		{"$Domainguid$", Guid.NewGuid().ToString()},
-			                   		{"$infrastructureguid$", Guid.NewGuid().ToString()},
-			                   		{"$controllersguid$", Guid.NewGuid().ToString()},
-			                   		{"$viewguid$", Guid.NewGuid().ToString()}
+			                   		{"$interfacesguid$", CreateGuid()},
+			                   		{"$domainguid$", CreateGuid()},
+			                   		{"$infrastructureguid$", CreateGuid()},
+			                   		{"$controllersguid$", CreateGuid()},
+			                   		{"$viewguid$", CreateGuid()}
 			                   	};
 		}
 
@@ -40,7 +49,9 @@ namespace NovaTemplateWizard
 		/// <param name="customParams">The custom parameters with which to perform parameter replacement in the project.</param>
 		public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
 		{
-			GlobalDictionary["$saferootprojectname$"] = replacementsDictionary["$safeprojectname$"];
+			//Saving the solution name to our dictionary for the project wizards to use.
+			GlobalDictionary["$safesolutionname$"] = replacementsDictionary["$safeprojectname$"];
+			GlobalDictionary["$solutionname$"] = replacementsDictionary["$projectname$"];
 		}
 
 		/// <summary>
