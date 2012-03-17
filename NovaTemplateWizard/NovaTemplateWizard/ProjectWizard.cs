@@ -4,6 +4,9 @@ using Microsoft.VisualStudio.TemplateWizard;
 
 namespace NovaTemplateWizard
 {
+	/// <summary>
+	/// The wizard used to create the projects.
+	/// </summary>
 	public class ProjectWizard : IWizard
 	{
 		/// <summary>

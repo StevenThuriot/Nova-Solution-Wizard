@@ -5,8 +5,15 @@ using Microsoft.VisualStudio.TemplateWizard;
 
 namespace NovaTemplateWizard
 {
+	/// <summary>
+	/// The wizard used to create the solution.
+	/// </summary>
 	public class SolutionWizard : IWizard
 	{
+		/// <summary>
+		/// Global dictionary to share with child wizards. 
+		/// This is mainly useful for sharing global guids and the solution name.
+		/// </summary>
 		public static readonly Dictionary<string, string> GlobalDictionary;
 
 		/// <summary>
@@ -16,11 +23,11 @@ namespace NovaTemplateWizard
 		{
 			GlobalDictionary = new Dictionary<string, string>
 			                   	{
-			                   		{"InterfacesGuid", Guid.NewGuid().ToString()},
-			                   		{"DomainGuid", Guid.NewGuid().ToString()},
-			                   		{"InfrastructureGuid", Guid.NewGuid().ToString()},
-			                   		{"ControllersGuid", Guid.NewGuid().ToString()},
-			                   		{"ViewGuid", Guid.NewGuid().ToString()}
+			                   		{"$interfacesguid$", Guid.NewGuid().ToString()},
+			                   		{"$Domainguid$", Guid.NewGuid().ToString()},
+			                   		{"$infrastructureguid$", Guid.NewGuid().ToString()},
+			                   		{"$controllersguid$", Guid.NewGuid().ToString()},
+			                   		{"$viewguid$", Guid.NewGuid().ToString()}
 			                   	};
 		}
 
