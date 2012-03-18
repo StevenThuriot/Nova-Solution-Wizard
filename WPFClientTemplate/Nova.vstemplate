@@ -8,19 +8,19 @@
     <TemplateContent>
         <ProjectCollection>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.Controllers">
-				Controllers\MyTemplate.vstemplate
+				Controllers\ControllersTemplate.vstemplate
 			</ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.Domain">
-				Domain\MyTemplate.vstemplate
+				Domain\DomainTemplate.vstemplate
 			</ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure">
-				Infrastructure\MyTemplate.vstemplate
+				Infrastructure\InfrastructureTemplate.vstemplate
 			</ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.Interfaces">
-				Interfaces\MyTemplate.vstemplate
+				Interfaces\InterfacesTemplate.vstemplate
 			</ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.View">
-				View\MyTemplate.vstemplate
+				View\ViewsTemplate.vstemplate
 			</ProjectTemplateLink>
         </ProjectCollection>
     </TemplateContent>
