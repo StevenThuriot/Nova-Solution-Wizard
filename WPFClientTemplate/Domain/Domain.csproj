@@ -76,7 +76,7 @@
   <ItemGroup>
     <ProjectReference Include="..\$solutionname$.Interfaces\$solutionname$.Interfaces.csproj">
       <Project>{$interfacesguid$}</Project>
-      <Name>Interfaces</Name>
+      <Name>$solutionname$.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

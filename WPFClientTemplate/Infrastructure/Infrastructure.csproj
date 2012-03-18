@@ -81,13 +81,13 @@
   <ItemGroup>
     <ProjectReference Include="..\$solutionname$.Domain\$solutionname$.Domain.csproj">
       <Project>{$domainguid$}</Project>
-      <Name>Domain</Name>
+      <Name>$solutionname$.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\$solutionname$.Interfaces\$solutionname$.Interfaces.csproj">
       <Project>{$interfacesguid$}</Project>
-      <Name>Interfaces</Name>
+      <Name>$solutionname$.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
