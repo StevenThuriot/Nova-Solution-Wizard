@@ -74,7 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\$safesolutionname$.Interfaces\$safesolutionname$.Interfaces.csproj">
+    <ProjectReference Include="..\$solutionname$.Interfaces\$solutionname$.Interfaces.csproj">
       <Project>{$interfacesguid$}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>

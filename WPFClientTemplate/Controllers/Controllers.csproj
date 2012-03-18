@@ -80,13 +80,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\$safesolutionname$.Infrastructure\$safesolutionname$.Infrastructure.csproj">
+    <ProjectReference Include="..\$solutionname$.Infrastructure\$solutionname$.Infrastructure.csproj">
       <Project>{$infrastructureguid$}</Project>
       <Name>Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\$safesolutionname$.Interfaces\$safesolutionname$.Interfaces.csproj">
+    <ProjectReference Include="..\$solutionname$.Interfaces\$solutionname$.Interfaces.csproj">
       <Project>{$interfacesguid$}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
