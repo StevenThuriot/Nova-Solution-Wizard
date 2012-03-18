@@ -14,32 +14,8 @@ namespace NovaTemplateWizard
 		/// Global dictionary to share with child wizards. 
 		/// This is mainly useful for sharing global guids and the solution name.
 		/// </summary>
-		public static readonly Dictionary<string, string> GlobalDictionary;
-
-		/// <summary>
-		/// Creates a new GUID.
-		/// </summary>
-		/// <returns></returns>
-		private static string CreateGuid()
-		{
-			return Guid.NewGuid().ToString();
-		}
-
-		/// <summary>
-		/// Initializes the <see cref="SolutionWizard"/> class.
-		/// </summary>
-		static SolutionWizard()
-		{
-			GlobalDictionary = new Dictionary<string, string>
-			                   	{
-			                   		{"$interfacesguid$", CreateGuid()},
-			                   		{"$domainguid$", CreateGuid()},
-			                   		{"$infrastructureguid$", CreateGuid()},
-			                   		{"$controllersguid$", CreateGuid()},
-			                   		{"$viewguid$", CreateGuid()}
-			                   	};
-		}
-
+		public static Dictionary<string, string> GlobalDictionary;
+		
 		/// <summary>
 		/// Runs custom wizard logic at the beginning of a template wizard run.
 		/// </summary>
@@ -49,9 +25,17 @@ namespace NovaTemplateWizard
 		/// <param name="customParams">The custom parameters with which to perform parameter replacement in the project.</param>
 		public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
 		{
+			GlobalDictionary = new Dictionary<string, string>();
+
 			//Saving the solution name to our dictionary for the project wizards to use.
 			GlobalDictionary["$safesolutionname$"] = replacementsDictionary["$safeprojectname$"];
 			GlobalDictionary["$solutionname$"] = replacementsDictionary["$projectname$"];
+
+			GlobalDictionary["$interfacesguid$"] = Guid.NewGuid().ToString();
+			GlobalDictionary["$domainguid$"] = Guid.NewGuid().ToString();
+			GlobalDictionary["$infrastructureguid$"] = Guid.NewGuid().ToString();
+			GlobalDictionary["$controllersguid$"] = Guid.NewGuid().ToString();
+			GlobalDictionary["$viewguid$"] = Guid.NewGuid().ToString();
 		}
 
 		/// <summary>
@@ -71,6 +55,9 @@ namespace NovaTemplateWizard
 		/// </summary>
 		public void RunFinished()
 		{
+			//Cleaning up our dictionary.
+			GlobalDictionary.Clear();
+			GlobalDictionary = null;
 		}
 
 		/// <summary>
