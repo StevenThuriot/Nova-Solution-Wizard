@@ -1,0 +1,31 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Nova WPF Client Solution</Name>
+        <Description>A Nova based Solution Template</Description>
+        <Icon>Icon.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Controllers">
+				Controllers\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Domain">
+				Domain\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure">
+				Infrastructure\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Interfaces">
+				Interfaces\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.View">
+				View\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>NovaTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03252df91086a919</Assembly>
+		<FullClassName>NovaTemplateWizard.SolutionWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>
