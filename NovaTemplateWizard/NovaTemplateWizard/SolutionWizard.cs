@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
 
@@ -27,15 +26,19 @@ namespace NovaTemplateWizard
 		{
 			GlobalDictionary = new Dictionary<string, string>();
 
+			//Making sure the first letter of the project is a capital.
+			replacementsDictionary["$safeprojectname$"] = replacementsDictionary["$safeprojectname$"].CapitalizeFirstLetter();
+
 			//Saving the solution name to our dictionary for the project wizards to use.
 			GlobalDictionary["$safesolutionname$"] = replacementsDictionary["$safeprojectname$"];
 			GlobalDictionary["$solutionname$"] = replacementsDictionary["$projectname$"];
 
-			GlobalDictionary["$interfacesguid$"] = Guid.NewGuid().ToString();
-			GlobalDictionary["$domainguid$"] = Guid.NewGuid().ToString();
-			GlobalDictionary["$infrastructureguid$"] = Guid.NewGuid().ToString();
-			GlobalDictionary["$controllersguid$"] = Guid.NewGuid().ToString();
-			GlobalDictionary["$viewguid$"] = Guid.NewGuid().ToString();
+			//Adding our project GUIDs to the global dictionary.
+			GlobalDictionary["$interfacesguid$"] = Helper.CreateGuid();
+			GlobalDictionary["$domainguid$"] = Helper.CreateGuid();
+			GlobalDictionary["$infrastructureguid$"] = Helper.CreateGuid();
+			GlobalDictionary["$controllersguid$"] = Helper.CreateGuid();
+			GlobalDictionary["$viewguid$"] = Helper.CreateGuid();
 		}
 
 		/// <summary>

@@ -18,6 +18,9 @@ namespace NovaTemplateWizard
 		/// <param name="customParams">The custom parameters with which to perform parameter replacement in the project.</param>
 		public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
 		{
+			//Making sure the first letter of the project is a capital.
+			replacementsDictionary["$safeprojectname$"] = replacementsDictionary["$safeprojectname$"].CapitalizeFirstLetter();
+
 			//Inserting our global variables into the project's variables as well.
 			foreach (var pair in SolutionWizard.GlobalDictionary)
 			{
