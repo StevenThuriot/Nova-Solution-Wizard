@@ -1,11 +1,11 @@
 ﻿using Ninject.Modules;
 
-namespace $safeprojectname$
+namespace $safesolutionname$
 {
 	/// <summary>
 	/// Dependency Injection Module
 	/// </summary>
-	public class Module : NinjectModule
+	public class InterfacesModule : NinjectModule
 	{
 		/// <summary>
 		/// Loads the module into the kernel.

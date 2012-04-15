@@ -2,8 +2,9 @@
     <TemplateData>
         <Name>Nova WPF Client Solution</Name>
         <Description>A Nova based Solution Template</Description>
-        <Icon>Icon.ico</Icon>
+        <Icon>Nova.ico</Icon>
         <ProjectType>CSharp</ProjectType>
+		<CreateInPlace>true</CreateInPlace>
     </TemplateData>
     <TemplateContent>
         <ProjectCollection>

@@ -5,7 +5,7 @@ namespace $safeprojectname$
 	/// <summary>
 	/// Dependency Injection Module
 	/// </summary>
-	public class Module : NinjectModule
+	public class DomainModule : NinjectModule
 	{
 		/// <summary>
 		/// Loads the module into the kernel.

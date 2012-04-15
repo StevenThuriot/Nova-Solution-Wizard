@@ -11,13 +11,14 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+	<CreateInPlace>true</CreateInPlace>
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="Infrastructure.csproj" File="Infrastructure.csproj" ReplaceParameters="true">
       <Folder Name="Factories" TargetFolderName="Factories" />
       <Folder Name="Gateways" TargetFolderName="Gateways" />
       <Folder Name="Mappers" TargetFolderName="Mappers" />
-      <ProjectItem ReplaceParameters="true" TargetFileName="Module.cs">Module.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="InfrastructureModule.cs">InfrastructureModule.cs</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
       </Folder>

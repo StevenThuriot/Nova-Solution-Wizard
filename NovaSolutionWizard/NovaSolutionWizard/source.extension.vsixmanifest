@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="NovaSolutionWizard.Microsoft.efb5fb26-e79e-47d3-ad4b-14c1a076115c">
+		<Name>Nova Solution Wizard</Name>
+		<Author>Steven Thuriot</Author>
+		<Version>1.0</Version>
+		<Description xml:space="preserve">Wizard to help set up Nova-based solutions.</Description>
+		<Locale>1033</Locale>
+		<MoreInfoUrl>http://thuriot.be</MoreInfoUrl>
+		<Icon>Nova.ico</Icon>
+		<PreviewImage>NovaPreview.jpg</PreviewImage>
+		<SupportedProducts>
+			<VisualStudio Version="10.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+				<Edition>Express_All</Edition>
+			</VisualStudio>
+		</SupportedProducts>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+	</Identifier>
+	<References />
+	<Content>
+		<Assembly AssemblyName="NovaTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03252df91086a919">NovaTemplateWizard.dll</Assembly>
+		<ProjectTemplate>ProjectTemplates</ProjectTemplate>
+	</Content>
+</Vsix>
