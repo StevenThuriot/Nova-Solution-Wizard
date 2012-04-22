@@ -8,6 +8,9 @@
     </TemplateData>
     <TemplateContent>
         <ProjectCollection>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.View">
+				View\ViewsTemplate.vstemplate
+			</ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.Controllers">
 				Controllers\ControllersTemplate.vstemplate
 			</ProjectTemplateLink>
@@ -19,9 +22,6 @@
 			</ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$safeprojectname$.Interfaces">
 				Interfaces\InterfacesTemplate.vstemplate
-			</ProjectTemplateLink>
-			<ProjectTemplateLink ProjectName="$safeprojectname$.View">
-				View\ViewsTemplate.vstemplate
 			</ProjectTemplateLink>
         </ProjectCollection>
     </TemplateContent>
